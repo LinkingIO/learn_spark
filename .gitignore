@@ -1,5 +1,7 @@
-./idea
-/output
-/target
+# folder
+.idea/
+output/
+target/
+# file
 pom.xml.bak
 .DS_Store
