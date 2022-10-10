@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="test-kafka-log">
+    <Properties>
+        <Property name="project.name" value="VN_EPOS_StreamKafkaPhoenix"/>
+    </Properties>
+    <Appenders>
+        <Kafka name="Kafka" topic="test">
+            <PatternLayout pattern="%date  %-5p [%-t] ${project.name}:${hostName}:%F:%L - %m"/>
+<!--            <Property name="bootstrap.servers">azalvedlkafu01.d01saedl.manulife.com:6667,azalvedlkafu02.d01saedl.manulife.com:6667</Property>-->
+<!--            <Property name="security.protocol">SASL_PLAINTEXT</Property>-->
+<!--            <Property name="sasl.mechanism">GSSAPI</Property>-->
+<!--            <Property name="sasl.kerberos.service.name">kafka</Property>-->
+            <Property name="bootstrap.servers">10.248.37.243:9200</Property>
+        </Kafka>
+        <Async name="Async">
+            <AppenderRef ref="Kafka"/>
+        </Async>
+
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%date  %-5p [%-t] :${project.name}:${hostName}:%F:%L - %m"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Kafka"/>
+            <AppenderRef ref="stdout"/>
+        </Root>
+    </Loggers>
+</Configuration>
