@@ -1,4 +1,4 @@
-package com.manulife.tmp
+package com.manulife.bigdata.spark.core.wc
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}

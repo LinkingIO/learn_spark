@@ -1,4 +1,4 @@
-package com.manulife.tmp
+package com.manulife.bigdata.spark.core.rdd.operator.transform
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
@@ -18,6 +18,8 @@ object Spark02_RDD_Operator_mapPartition_Test {
     )
 
     mapRDD.collect().foreach(println)
+
+    println(mapRDD.collect().sum)
 
     sc.stop()
 
