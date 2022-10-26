@@ -1,7 +1,10 @@
 package com.manulife.bigdata.scala.chapter05.learnObject
 
 object Test14_TraitSelfType {
-
+  def main(args: Array[String]): Unit = {
+    val register: UserRegister = new UserRegister("alice", "123456")
+    register.insert()
+  }
 }
 
 class User(val username: String,val password: String)
