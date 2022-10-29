@@ -1,4 +1,4 @@
-package com.manulife.bigdata.scala.function
+package com.manulife.bigdata.scala.chapter04.function
 
 object Scala01_Function_Simplify {
   def main(args: Array[String]): Unit = {

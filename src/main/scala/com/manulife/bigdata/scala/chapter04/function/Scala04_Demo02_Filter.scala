@@ -1,4 +1,4 @@
-package com.manulife.bigdata.scala.function
+package com.manulife.bigdata.scala.chapter04.function
 
 import scala.collection.mutable.ArrayBuffer
 

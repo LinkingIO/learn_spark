@@ -1,4 +1,4 @@
-package com.manulife.bigdata.scala.function
+package com.manulife.bigdata.scala.chapter04.function
 
 object Scala02_TestFunction02 {
   def main(args: Array[String]): Unit = {

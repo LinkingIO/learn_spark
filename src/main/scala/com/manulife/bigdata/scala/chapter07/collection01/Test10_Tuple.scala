@@ -1,4 +1,4 @@
-package com.manulife.bigdata.scala.chapter07
+package com.manulife.bigdata.scala.chapter07.collection01
 
 object Test10_Tuple {
   def main(args: Array[String]): Unit = {

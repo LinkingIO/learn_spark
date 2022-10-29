@@ -1,5 +1,5 @@
-hello world
-spark flink flume
-hadoop mysql hello
-spark hadoop flume
-yarn mesos
+hello scala spark kafka
+hello scala spark flink
+hello scala spark
+hello scala
+hello
