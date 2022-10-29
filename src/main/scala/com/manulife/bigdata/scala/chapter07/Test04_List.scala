@@ -29,5 +29,7 @@ object Test04_List {
     // 遍历
     listAdd.foreach(println)
 
+    println(list.sortBy(x => x))
+
   }
 }
