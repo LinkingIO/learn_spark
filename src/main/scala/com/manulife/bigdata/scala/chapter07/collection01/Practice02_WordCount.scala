@@ -11,6 +11,4 @@ object Practice02_WordCount {
       .take(3)
     println(worldCountTop3.mkString(","))
   }
-
-
 }
