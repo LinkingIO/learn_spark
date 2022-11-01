@@ -3,11 +3,12 @@ package com.manulife.bigdata.spark.core.rdd.operator.transform
 import com.manulife.bigdata.spark.core.rdd.operator.transform.SCFactory.sc
 import org.apache.spark.rdd.RDD
 
-object Spark11_RDD_Repartition {
+object Spark12_RDD_SortBy {
   def main(args: Array[String]): Unit = {
-    val dataRDD: RDD[Int] = sc.makeRDD(List(1, 3, 5, 2), 1)
-    dataRDD.repartition(4)
+    val dataRDD: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4, 1, 3), 2)
+    val value: RDD[Int] = dataRDD.sortBy(num => num, false, 4)
 
-    sc.stop()
+    value.collect().foreach(println)
+
   }
 }
