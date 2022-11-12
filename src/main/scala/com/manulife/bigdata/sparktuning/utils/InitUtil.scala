@@ -13,8 +13,8 @@ object InitUtil {
     val sparkConf = new SparkConf().setAppName("InitData")
 //      .setMaster("local[*]") //TODO 要打包提交集群执行，注释掉
     val sparkSession: SparkSession = initSparkSession(sparkConf)
-    //    initHiveTable(sparkSession)
-    //    initBucketTable(sparkSession)
+        initHiveTable(sparkSession)
+        initBucketTable(sparkSession)
     saveData(sparkSession)
   }
 
@@ -23,7 +23,7 @@ object InitUtil {
     val sparkSession = SparkSession.builder().config(sparkConf).enableHiveSupport().getOrCreate()
     val ssc = sparkSession.sparkContext
     // TODO 改成自己的地址
-    ssc.hadoopConfiguration.set("fs.defaultFS", "hdfs://hadoop1:8020")
+    ssc.hadoopConfiguration.set("fs.defaultFS", "hdfs://master:9000")
     sparkSession
   }
 
