@@ -10,3 +10,5 @@ spark basic knowledge
 ## spark hadoop hive dockerfile install
 [reference link](https://github.com/panovvv/bigdata-docker-compose)
 
+## enable spark on yarn 
+[spark conf](https://blog.csdn.net/QYHuiiQ/article/details/127270804)
