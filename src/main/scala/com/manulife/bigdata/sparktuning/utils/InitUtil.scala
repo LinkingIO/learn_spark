@@ -16,6 +16,7 @@ object InitUtil {
         initHiveTable(sparkSession)
         initBucketTable(sparkSession)
     saveData(sparkSession)
+    sparkSession.stop()
   }
 
   def initSparkSession( sparkConf: SparkConf ): SparkSession = {
